@@ -1,6 +1,7 @@
 <%post.comments.each do |comment| %>
   <div class ="comment-content">
     <p><%= comment.content %></p>
+    <p>by <%= comment.user.email %></p>
     <hr>
   </div>
 <%end %>
