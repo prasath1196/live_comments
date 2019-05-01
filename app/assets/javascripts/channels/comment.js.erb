@@ -1,0 +1,12 @@
+(function() {
+    App.notifications = App.cable.subscriptions.create("CommentChannel", {
+        connected: function() {},
+        disconnected: function() {},
+        received: function(data) {
+            console.log(data.post_id)
+            $('#comments-of-'+data.post_id+'').html(data.listing)
+        }
+    });
+
+}).call(this);
+
