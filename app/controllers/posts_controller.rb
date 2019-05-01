@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
+  before_action :fetch_new_comment, only:[:index]
   def index
-    @posts = current_user.posts.all
+    @posts = Post.all
   end
 
   def show
@@ -22,5 +23,9 @@ class PostsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:title,:content)
+  end
+
+  def fetch_new_comment
+    @comment = Comment.new
   end
 end
