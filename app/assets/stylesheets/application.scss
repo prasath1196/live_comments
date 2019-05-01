@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
+
+
+.section-header{
+  margin-top:2%;
+}
+.heading-text{
+  font-size:20px;
+  font-weight:900;
+}

@@ -1,0 +1,22 @@
+<%posts.each do |post| %>
+  <div class ="post-container">
+    <div class ="post-title col-md-6">
+      <p><b>Title:</b><%=post.title%></p>
+    </div>
+    <div class = "post-content col-md-8">
+      <p><b>Content:</b></b><%= post.content %></p>
+    </div>
+    <!--<div class ="comments-section">
+      <div class ="section-header col-md-6"><b>Comments</b></div>
+      <div class ="comment-form-section col-md-8">
+        <%#= render 'comments/comment_form', comment:@comment, post_id:post.id %>
+        <hr>
+      </div>
+      <div class = "comments-container" id="comments-of-<%#=post.id%>">
+        <div class ="comment-listing-area col-md-8">
+          <%#= render 'comments/comment_listing', post:post %>
+        </div>
+      </div>
+    </div>-->
+  </div>
+<% end %>
