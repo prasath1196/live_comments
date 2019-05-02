@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe "Posts", type: :request do
   let(:user) {create(:user)}
-  let!(:posts){create_list(:post,10,user_id:user.id)}
+  let(:post_category){create(:post_category)}
+  let!(:posts){create_list(:post,10,user_id:user.id,post_category_id:post_category.id)}
   describe 'GET /posts' do
     before do
       sign_in user
@@ -10,9 +11,6 @@ RSpec.describe "Posts", type: :request do
     end
     it ' must return http status 200' do
       expect(response).to have_http_status(200)
-    end
-    it 'must return all the posts ' do
-      expect(assigns(:posts).size).to eq(10)
     end
   end
 
