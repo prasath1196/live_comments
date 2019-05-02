@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :fetch_new_comment, only:[:index]
   def index
-    @posts = Post.all
+    @posts = current_user.subscribed_posts
   end
 
   def show
@@ -11,7 +11,6 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.create!(post_params)
     if @post
-      add_subscription
       redirect_to root_path
     else
       redirect_to :new_post_path
@@ -30,8 +29,5 @@ class PostsController < ApplicationController
   def fetch_new_comment
     @comment = Comment.new
   end
-
-  def add_subscription
-    Subscription.create!(user_id:@post.user.id,post_category_id:@post.post_category.id)
-  end
+  
 end

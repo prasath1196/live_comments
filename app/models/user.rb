@@ -36,4 +36,12 @@ class User
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :subscriptions
+
+  def subscribed_posts
+    posts = []
+    subscriptions.each do |s|
+      posts<<s.post_category.posts
+    end
+    posts.flatten!
+  end
 end
