@@ -10,6 +10,7 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.create!(post_params)
+    NotificationJob.perform_now(@post)
     if @post
       redirect_to root_path
     else
@@ -29,5 +30,5 @@ class PostsController < ApplicationController
   def fetch_new_comment
     @comment = Comment.new
   end
-  
+
 end
