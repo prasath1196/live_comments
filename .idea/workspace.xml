@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7bd924b4-7bee-4525-ba15-3f693bc1d17e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/subscription.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/subscription.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/application/_top_nav.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/application/_top_nav.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
-    </list>
+    <list default="true" id="7bd924b4-7bee-4525-ba15-3f693bc1d17e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/log/" />
@@ -372,12 +366,12 @@
       <updated>1556692748065</updated>
       <workItem from="1556692749793" duration="12075000" />
       <workItem from="1556704983278" duration="3057000" />
-      <workItem from="1556811574494" duration="16215000" />
+      <workItem from="1556811574494" duration="16503000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31347000" />
+    <option name="totallyTimeSpent" value="31635000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
