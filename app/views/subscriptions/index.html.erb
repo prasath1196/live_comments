@@ -1,0 +1,26 @@
+<div class = "container">
+<div class = "post-subscrition-section col-md-6">
+  <table class = "table">
+    <thead>
+      <th>Post Category</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+    <%PostCategory.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+        <td>
+          <%if category.subscriptions.pluck(:user_id).include?(current_user.id) %>
+            <%= link_to "Unsubscribe",subscription_path(category.id),method: :delete %>
+          <%else %>
+            <%= link_to "Subscribe",subscriptions_path(category_id:category.id),method: :post%>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+
+</div>
+</div>

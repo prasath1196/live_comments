@@ -9,7 +9,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    if current_user.posts.create!(post_params)
+    @post = current_user.posts.create!(post_params)
+    if @post
+      add_subscription
       redirect_to root_path
     else
       redirect_to :new_post_path
@@ -22,10 +24,14 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title,:content)
+    params.require(:post).permit(:title,:content,:post_category_id)
   end
 
   def fetch_new_comment
     @comment = Comment.new
+  end
+
+  def add_subscription
+    Subscription.create!(user_id:@post.user.id,post_category_id:@post.post_category.id)
   end
 end

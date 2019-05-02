@@ -35,4 +35,5 @@ class User
   # field :locked_at,       type: Time
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :subscriptions
 end
